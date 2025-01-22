@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (!isset($_SESSION['loggedin'])) {
+    header('Location: login.php');
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,94 +12,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Passions Unleashed</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        .login-form {
-            display: none;
-            text-align: center;
-            margin-top: 100px;
-        }
-        .content {
-            display: none;
-        }
-    </style>
-    <script>
-        const validUser = 'family'; // Replace with your username
-        const validPass = 'password123'; // Replace with your password
-
-        function checkLogin() {
-            const user = document.getElementById('username').value;
-            const pass = document.getElementById('password').value;
-
-            if (user === validUser && pass === validPass) {
-                document.querySelector('.login-form').style.display = 'none';
-                document.querySelector('.content').style.display = 'block';
-            } else {
-                alert('Invalid credentials. Please try again.');
-            }
-        }
-
-        window.onload = function() {
-            document.querySelector('.login-form').style.display = 'block';
-        }
-    </script>
 </head>
 <body>
-    <div class="login-form">
-        <h2>Login</h2>
-        <label for="username">Username:</label>
-        <input type="text" id="username" required>
-        <br>
-        <label for="password">Password:</label>
-        <input type="password" id="password" required>
-        <br>
-        <button onclick="checkLogin()">Login</button>
-    </div>
-
-    <div class="content">
-        <nav>
-            <ul>
-                <li><a href="athletics.html">Athletics</a></li>
-                <li><a href="food.html">Food</a></li>
-                <li><a href="gardening.html">Gardening</a></li>
-                <li><a href="genealogy.html">Genealogy</a></li>
-                <li><a href="music.html">Music</a></li>
-                <li><a href="travelling.html">Travelling</a></li>
-            </ul>
-        </nav>
-        <header>
-            <h1>Passions Unleashed</h1>
-            <p>Discover the vibrant tapestry of life through genealogy, music, athletics, gardening, travelling, and food recipes. Dive into our world of shared passions and endless possibilities, where every interest is a journey worth exploring.</p>
-            <button onclick="location.href='#music'">Get Started</button>
-        </header>
-        <main>
-            <section id="athletics">
-                <h2>Athletics</h2>
-                <p>Explore the world of sports, fitness, and all things athletic.</p>
-            </section>
-            <section id="food">
-                <h2>Food</h2>
-                <p>Delve into delicious recipes and culinary delights.</p>
-            </section>
-            <section id="gardening">
-                <h2>Gardening</h2>
-                <p>Discover the joys of gardening and cultivating beautiful plants.</p>
-            </section>
-            <section id="genealogy">
-                <h2>Genealogy</h2>
-                <p>Uncover your family history and ancestral roots.</p>
-            </section>
-            <section id="music">
-                <h2>Music</h2>
-                <p>Immerse yourself in the world of music, from classical to contemporary.</p>
-            </section>
-            <section id="travelling">
-                <h2>Travelling</h2>
-                <p>Embark on journeys to exciting destinations around the globe.</p>
-            </section>
-        </main>
-        <footer>
-            <p>&copy; 2025 Passions Unleashed. All rights reserved.</p>
-        </footer>
-    </div>
+    <nav>
+        <ul>
+            <li><a href="athletics.html">Athletics</a></li>
+            <li><a href="food.html">Food</a></li>
+            <li><a href="gardening.html">Gardening</a></li>
+            <li><a href="genealogy.html">Genealogy</a></li>
+            <li><a href="music.html">Music</a></li>
+            <li><a href="travelling.html">Travelling</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1>Passions Unleashed</h1>
+        <p>Discover the vibrant tapestry of life through genealogy, music, athletics, gardening, travelling, and food recipes. Dive into our world of shared passions and endless possibilities, where every interest is a journey worth exploring.</p>
+        <button onclick="location.href='#music'">Get Started</button>
+    </header>
+    <main>
+        <section id="athletics">
+            <h2>Athletics</h2>
+            <p>Explore the world of sports, fitness, and all things athletic.</p>
+        </section>
+        <section id="food">
+            <h2>Food</h2>
+            <p>Delve into delicious recipes and culinary delights.</p>
+        </section>
+        <section id="gardening">
+            <h2>Gardening</h2>
+            <p>Discover the joys of gardening and cultivating beautiful plants.</p>
+        </section>
+        <section id="genealogy">
+            <h2>Genealogy</h2>
+            <p>Uncover your family history and ancestral roots.</p>
+        </section>
+        <section id="music">
+            <h2>Music</h2>
+            <p>Immerse yourself in the world of music, from classical to contemporary.</p>
+        </section>
+        <section id="travelling">
+            <h2>Travelling</h2>
+            <p>Embark on journeys to exciting destinations around the globe.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Passions Unleashed. All rights reserved.</p>
+    </footer>
 </body>
 </html>
