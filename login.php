@@ -1,12 +1,16 @@
 <?php
 session_start();
-// Assume you have a user database to verify the credentials
+
+// Define the family username and password
+$family_username = 'familyUser';
+$family_password = 'familyPass123';
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    // Verify the username and password (hashed, in a real-world scenario)
-    if ($username === 'user' && $password === 'securepassword') {
+    // Check if the entered username and password match the family credentials
+    if ($username === $family_username && $password === $family_password) {
         $_SESSION['loggedin'] = true;
         header('Location: index.php');
         exit();
@@ -15,20 +19,3 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 }
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <form method="POST">
-        <input type="text" name="username" placeholder="Username" required>
-        <input type="password" name="password" placeholder="Password" required>
-        <button type="submit">Login</button>
-    </form>
-</body>
-</html>
