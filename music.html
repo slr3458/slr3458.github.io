@@ -9,13 +9,12 @@
 <body>
     <nav>
         <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.php">Home</a></li>
             <li><a href="athletics.html">Athletics</a></li>
             <li><a href="food.html">Food</a></li>
             <li><a href="gardening.html">Gardening</a></li>
             <li><a href="genealogy.html">Genealogy</a></li>
             <li><a href="travelling.html">Travelling</a></li>
-            <!-- Add other links as needed -->
         </ul>
     </nav>
     <header>
@@ -28,16 +27,23 @@
             <p>Music is an art form and cultural activity whose medium is sound. Discover various genres, artists, and the history of music.</p>
         </section>
         <section>
-            <h2>My Favourite Piece of Music</h2>
-            <div id="music-title">Entangled by Genesis</div>
+            <h2>Music Resources</h2>
+            <div id="music-title">Entangled - 02</div>
             <audio id="audio-player" controls preload="auto">
-                <source src="https://raw.githubusercontent.com/slr3458/slr3458.github.io/index/Entangled - 02.mp3" type="audio/mp3">
+                <source src="https://raw.githubusercontent.com/slr3458/slr3458.github.io/index/Entangled%20-%2002.mp3" type="audio/mp3">
                 Your browser does not support the audio element.
             </audio>
         </section>
+        <!-- Add more sections/content as needed -->
     </main>
     <footer>
         <p>&copy; 2025 Passions Unleashed. All rights reserved.</p>
     </footer>
+    <script>
+        document.getElementById('audio-player').addEventListener('loadeddata', function() {
+            var audioTitle = 'Entangled - 02'; // Update this to the actual title of the music piece
+            document.getElementById('music-title').innerText = audioTitle;
+        });
+    </script>
 </body>
 </html>
