@@ -5,6 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Athletics - Passions Unleashed</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* Center the container contents */
+        }
+        .column {
+            flex: 1;
+            padding: 10px;
+            min-width: 300px;
+        }
+        table {
+            margin: 0 auto; /* Center the table */
+            border-collapse: collapse;
+            width: 50%; /* Adjust width as needed */
+        }
+        th, td {
+            border: 1px solid #000;
+            padding: 10px;
+            text-align: center;
+        }
+        ol {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        ol li::before {
+            content: '';
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .column {
+                max-width: 100%;
+            }
+            table {
+                width: 80%; /* Adjust width for smaller screens */
+            }
+        }
+    </style>
 </head>
 <body>
     <nav>
@@ -15,7 +62,6 @@
             <li><a href="genealogy.html">Genealogy</a></li>
             <li><a href="music.html">Music</a></li>
             <li><a href="travelling.html">Travelling</a></li>
-            <!-- Add other links as needed -->
         </ul>
     </nav>
     <header>
@@ -26,6 +72,67 @@
         <section>
             <h2>About Athletics</h2>
             <p>Delve into the realm of sports and fitness, and find out how to stay active and healthy.</p>
+        </section>
+        <section>
+            <h2>My Personal Bests</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Distance</th>
+                        <th>Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>100m</td>
+                        <td>13.10s</td> 
+                    </tr>
+                    <tr>
+                        <td>200m</td>
+                        <td>28.48s</td>
+                    </tr>
+                    <tr>
+                        <td>400m</td>
+                        <td>59.23s</td>
+                    </tr>
+                    <tr>
+                        <td>800m</td>
+                        <td>2:28.41</td>
+                    </tr>
+                    <tr>
+                        <td>1 Mile</td>
+                        <td>5:06</td>
+                    </tr>
+                    <tr>
+                        <td>10K</td>
+                        <td>39:28</td>
+                    </tr>
+                    <tr>
+                        <td>10 Miles</td>
+                        <td>1:04:07</td>
+                    </tr>
+                    <tr>
+                        <td>Half Marathon</td>
+                        <td>1:24:37</td>
+                    </tr>
+                    <tr>
+                        <td>20 Miles</td>
+                        <td>2:16:59</td>
+                    </tr>
+                    <tr>
+                        <td>Marathon</td>
+                        <td>3:07:06</td>
+                    </tr>
+                    <tr>
+                        <td>33 Miles</td>
+                        <td>4:30:14</td>
+                    </tr>
+                    <tr>
+                        <td>80 Miles</td>
+                        <td>13:06:10</td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
         <!-- Add more sections/content as needed -->
     </main>
