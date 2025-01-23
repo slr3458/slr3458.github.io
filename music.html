@@ -5,6 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music - Passions Unleashed</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .container {
+            display: flex;
+        }
+        .column {
+            flex: 1;
+            padding: 10px;
+        }
+        ol {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        ol li::before {
+            content: '';
+        }
+    </style>
 </head>
 <body>
     <nav>
@@ -34,16 +50,42 @@
                 Your browser does not support the audio element.
             </audio>
         </section>
+        <section class="container">
+            <div class="column">
+                <h2>Top 10 Artists</h2>
+                <ol>
+                    <li>1  Genesis</li>
+                    <li>2  Phil Collins</li>
+                    <li>3  Pink Floyd</li>
+                    <li>4  Moody Blues</li>
+                    <li>5  Beatles</li>
+                    <li>6  David Bowie</li>
+                    <li>7  ELO</li>
+                    <li>8  Rod Stewart</li>
+                    <li>9  Elton John</li>
+                    <li>10 Pet Shop Boys</li>
+                </ol>
+            </div>
+            <div class="column">
+                <h2>Top 10 Albums</h2>
+                <ol>
+                    <li>1  A Trick of the Tail - Genesis</li>
+                    <li>2  Dark Side of the Moon - Pink Floyd</li>
+                    <li>3  Wish You Were Here - Pink Floyd</li>
+                    <li>4  Wind & Wuthering - Genesis</li>
+                    <li>5  Animals - Pink Floyd</li>
+                    <li>6  Close to the Edge - Yes</li>
+                    <li>7  Hotel California - Eagles</li>
+                    <li>8  Sgt Peppers - Beatles</li>
+                    <li>9  But Seriously - Phil Collins</li>
+                    <li>10 Hello, I Must be Going - Phil Collins</li>
+                </ol>
+            </div>
+        </section>
         <!-- Add more sections/content as needed -->
     </main>
     <footer>
         <p>&copy; 2025 Passions Unleashed. All rights reserved.</p>
     </footer>
-    <script>
-        document.getElementById('audio-player').addEventListener('loadeddata', function() {
-            var audioTitle = 'Entangled - Genesis'; // Update this to the actual title of the music piece
-            document.getElementById('music-title').innerText = audioTitle;
-        });
-    </script>
 </body>
 </html>
