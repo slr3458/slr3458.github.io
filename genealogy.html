@@ -6,25 +6,31 @@
     <title>Genealogy - Passions Unleashed</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-       header {
-        background-image: url('Family Tree.png');
-        background-size: cover;
-        background-position: center;
-        color: white;
-        padding: 60px; /* Increase padding to extend the image */
-        text-align: center;
-        height: 400px; /* Add height if you want a specific size */
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-    header h1 {
-        margin: 0;
-    }
-    header p {
-        margin: 10px 0 0;
-    }
-    </style>
+   header {
+    background-image: url('Family Tree.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 60px; /* Increase padding to extend the image */
+    text-align: center;
+    height: 400px; /* Add height if you want a specific size */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%; /* Ensure the header covers the full width */
+}
+header h1 {
+    margin: 0;
+}
+header p {
+    margin: 10px 0 0;
+}
+header img {
+    width: 100%; /* Make the image cover the full width of the header */
+    height: auto; /* Maintain the image's aspect ratio */
+}
+</style>
+
 </head>
 <body>
     <nav>
@@ -48,12 +54,6 @@
             <h2>About Genealogy</h2>
             <p>Discover the fascinating world of genealogy, tracing your lineage and uncovering your family's history.</p>
         </section>
-        <section>
-            <h2>DNA Matches Spreadsheet</h2>
-            <a href="https://raw.githubusercontent.com/slr3458/slr3458.github.io/index/Ancestry Matches SLR.xlsm" download>Download DNA Matches Spreadsheet</a>
-        </section>
-        <!-- Removed the section with the family tree image -->
-        <!-- Add more sections/content as needed -->
     </main>
     <footer>
         <p>&copy; 2025 Passions Unleashed. All rights reserved.</p>
