@@ -6,12 +6,19 @@
     <title>Music - Passions Unleashed</title>
     <link rel="stylesheet" href="styles.css">
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
         .container {
             display: flex;
+            flex-wrap: wrap;
         }
         .column {
             flex: 1;
             padding: 10px;
+            min-width: 300px;
         }
         ol {
             list-style-type: none;
@@ -19,6 +26,15 @@
         }
         ol li::before {
             content: '';
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .column {
+                max-width: 100%;
+            }
         }
     </style>
 </head>
